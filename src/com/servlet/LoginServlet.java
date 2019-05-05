@@ -44,9 +44,9 @@ public class LoginServlet extends HttpServlet {
 
         try {
             expert = queryRunner.query(sql, new BeanHandler<Expert>(Expert.class), userId, password);
-            String name = expert.getName();
             if (expert != null){
 
+                String name = expert.getName();
                 session.setAttribute("userId",userId);
                 session.setAttribute("password",password);
                 session.setAttribute("name",name);
