@@ -50,14 +50,8 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("userId",userId);
                 session.setAttribute("password",password);
                 session.setAttribute("name",name);
-//        JSONArray jsonArray =  JSONArray.fromObject(experts);
-//        String json = jsonArray.toString();
-//        request.setAttribute("jsonStr",json);
-//        request.setAttribute("lists",experts);
 //
                 request.getRequestDispatcher("/main").forward(request, response);
-//                request.getRequestDispatcher("jsp/main.jsp").forward(request, response);
-//
             } else{
                 response.sendRedirect("login.jsp?error=yes");
 //                response.getWriter().write("sorry,your userName or password is wrong");
